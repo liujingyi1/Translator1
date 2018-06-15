@@ -1,0 +1,84 @@
+<resources>
+    <string name="api_key">51549e7b81564820b4194eba08d56ead</string>
+    <string name="tts_text">This is a demo of Microsoft Cognitive Services Text to Speech API.</string>
+    <string name="tts_text_zh">松开手指,取消发送.</string>
+    <string name="play_button_name">Play</string>
+    <string name="stop_button_name">Stop</string>
+    <string name="tts_text_ar">يتعذر حذف جهات الاتصال من حساباتك المخصصة للقراءة فقط، ولكن يمكن إخفاؤها</string>
+    <string name="tts_text_bg">Този контакт е само за четене. Не може да бъде изтрит, но можете да го скриете</string>
+    <string name="tts_text_ca">"Vols desar els canvis que ja has aplicat i enllaçar els contactes seleccionats?"</string>
+    <string name="tts_text_cs">"Chcete uložit provedené změny, zrušit propojení kontaktu a vytvořit několik samostatných kontaktů?"</string>
+    <string name="tts_text_da">"Vil du gemme de ændringer, du allerede har foretaget, og sammenflette med den valgte kontaktperson?"</string>
+    <string name="tts_text_fr">"Ce contact est en lecture seule. Il ne peut pas être supprimé, mais vous pouvez le masquer."</string>
+    <string name="tts_text_es">Este contacto es de solo lectura. No se puede eliminar, pero sí ocultar.</string>
+    <string name="tts_text_hi">\"क्या आप पहले से किए गए बदलावों को सहेजना और इस संपर्क को एकाधिक संपर्कों में अनलिंक करना चाहते हैं?</string>
+    <string name="tts_text_vi">Bạn có muốn lưu các thay đổi mình đã thực hiện và hủy liên kết liên hệ này thành nhiều liên hệ không</string>
+    <string name="tts_text_hk">這是唯讀聯絡人，因此無法刪除，但可加以隱藏</string>
+    <string name="tts_text_tw">您要儲存目前所做變更，並將這個聯絡人的連結取消，還原為多筆聯絡人資料嗎</string>
+    <string name="tts_text_ru">"Сохранить изменения и разделить этот контакт?"</string>
+    <string name="home_label">THome</string>
+
+    <string name="final_response_error">Failed to record your voice</string>
+
+    <string name="app_name">Translator</string>
+    <string name="compose_message">Compse message</string>
+    <string name="recoder_normal">按住 说话</string>
+    <string name="recoder_recording">松开 结束</string>
+    <string name="recoder_want_cancel">松开手指,取消发送</string>
+    <string name="recoder_how_to_cancel">上滑手指,取消发送</string>
+    <string name="recoder_too_short">录音时间太短</string>
+    <string name="code">CODE:</string>
+    <string name="no_network">NO network!</string>
+    <string name="need_wifi">PLS CONNECT WIFI!</string>
+    <string name="find_code">Find</string>
+    <string name="msg_txt_default">default </string>
+    <string name="stt_error">Sound to text error!</string>
+
+    <string name="compose_auto_text">Auto report</string>
+    <string name="compose_textsize_text">Text size</string>
+    <string name="compose_end_text">Hang up</string>
+
+    <string name="language_name_zh_cn" translatable="false">"普通话"</string>
+    <string name="language_name_zh_hk" translatable="false">"广东话"</string>
+    <string name="language_name_en_us" translatable="false">"English (US)"</string>
+    <string name="language_name_en_au" translatable="false">"English (AU)"</string>
+    <string name="language_name_en_ca" translatable="false">"English (CA)"</string>
+    <string name="language_name_en_gb" translatable="false">"English (UK)"</string>
+    <string name="language_name_en_in" translatable="false">"English (IN)"</string>
+    <string name="language_name_en_nz" translatable="false">"English (NZ)"</string>
+    <string name="language_name_ar_eg" translatable="false">"Arabic (Egypt)"</string>
+    <string name="language_name_da_dk" translatable="false">"Danish (Denmark)"</string>
+    <string name="language_name_de_de" translatable="false">"German (Germany)"</string>
+    <string name="language_name_es_es" translatable="false">"Spanish (Spain)"</string>
+    <string name="language_name_es_mx" translatable="false">"Spanish (Mexico)"</string>
+    <string name="language_name_fi_fi" translatable="false">"Finnish (Finland)"</string>
+    <string name="language_name_fr_ca" translatable="false">"French (Canada)"</string>
+    <string name="language_name_fr_fr" translatable="false">"French (France)"</string>
+    <string name="language_name_hi_in" translatable="false">"Hindi (India)"</string>
+    <string name="language_name_it_it" translatable="false">"Italian (Italy)"</string>
+    <string name="language_name_ja_jp" translatable="false">"Japanese (Japan)"</string>
+    <string name="language_name_ko_kr" translatable="false">"Korean (Korea)"</string>
+    <string name="language_name_pl_pl" translatable="false">"Polish (Poland)"</string>
+    <string name="language_name_pt_br" translatable="false">"Portuguese (Brazil)"</string>
+    <string name="language_name_pt_pt" translatable="false">"Portuguese (Portugal)"</string>
+    <string name="language_name_ru_ru" translatable="false">"Russian (Russia)"</string>
+    <string name="language_name_sv_se" translatable="false">"Swedish (Sweden)"</string>
+    <string name="missing_required_permission">You have disabled a required permission.</string>
+
+    <!-- Settings strings-->
+    <string name="setting_title">Settings</string>
+    <string name="wifi_setting_button_label">WiFi</string>
+    <string name="pair_setting_button_label">Pair</string>
+    <string name="role_setting_button_label">Role</string>
+    <string name="common_setting_button_label">Common setting</string>
+    <string name="storage_setting_button_label">Storage</string>
+    <string name="ota_setting_button_label">Ota</string>
+    <string name="about_setting_button_label">About</string>
+    <string name="device_info_title">Device info</string>
+    <string name="device_name">Device name:</string>
+    <string name="device_model">Device model:</string>
+    <string name="serial_number">Serial number:</string>
+    <string name="mac_address">Mac address:</string>
+    <string name="device_version">Device version:</string>
+
+</resources>

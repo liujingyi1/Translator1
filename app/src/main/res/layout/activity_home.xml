@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="horizontal"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:paddingEnd="3dp"
+    android:paddingStart="3dp"
+    >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_sidebar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_language_items_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.rgk.android.translator.view.CircleIndicatorView
+            android:id="@+id/id_home_page_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center_horizontal"
+            app:indicatorColor="#5f6268"
+            app:enableIndicatorSwitch="true"
+            app:indicatorSelectColor="@color/colorPrimary"
+            app:indicatorRadius="10dp"
+            app:indicatorSpace="30dp"
+            app:indicatorBorderWidth="0dp"
+            />
+        <include layout="@layout/floating_action_button"/>
+    </FrameLayout>
+</LinearLayout>

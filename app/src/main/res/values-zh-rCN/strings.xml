@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">"翻译机"</string>
+    <string name="compose_message">"撰写信息"</string>
+    <string name="recoder_normal">"按住 说话"</string>
+    <string name="recoder_recording">"松开 结束"</string>
+    <string name="recoder_want_cancel">"松开手指,取消发送"</string>
+    <string name="recoder_how_to_cancel">上滑手指,取消发送</string>
+    <string name="recoder_too_short">录音时间太短</string>
+    <string name="code">CODE:</string>
+    <string name="no_network">没网啊!</string>
+    <string name="need_wifi">连个WIFI!</string>
+    <string name="find_code">找找</string>
+    <string name="missing_required_permission">"您已停用某项必需权限。"</string>
+
+    <!-- Settings strings-->
+    <string name="setting_title">设置</string>
+    <string name="wifi_setting_button_label">WiFi设置</string>
+    <string name="pair_setting_button_label">设备配对</string>
+    <string name="role_setting_button_label">使用角色</string>
+    <string name="common_setting_button_label">通用设置</string>
+    <string name="storage_setting_button_label">存储设置</string>
+    <string name="ota_setting_button_label">软件升级</string>
+    <string name="about_setting_button_label">关于设备</string>
+    <string name="device_info_title">设备信息</string>
+    <string name="device_name">设备名称:</string>
+    <string name="device_model">设备型号:</string>
+    <string name="serial_number">序列号:</string>
+    <string name="mac_address">Mac地址:</string>
+    <string name="device_version">设备版本:</string>
+
+    <string name="final_response_error">识别您的声音失败</string>
+</resources>

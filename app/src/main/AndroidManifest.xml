@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rgk.android.translator">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".TranslatorApp"
+        android:allowBackup="true"
+        android:allowClearUserData="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HomeActivity"
+            android:label="@string/home_label"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ComposeMessageActivity"
+            android:label="@string/compose_message"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="landscape"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".microsoft.tts.TextMessageActivity"
+            android:label="TextMessage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chat.ChatActivity" />
+        <activity android:name=".RequestPermissionsActivity"/>
+        <activity android:name=".settings.SettingsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <receiver
+            android:name=".mpush.sdk.MPushReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.mpush.HEALTH_CHECK" />
+                <action android:name="com.mpush.NOTIFY_CANCEL" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".mpush.sdk.MPushService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".mpush.sdk.MPushFakeService" />
+
+        <receiver
+            android:name=".ui.chat.PushReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.mpush.MESSAGE_RECEIVED" /> <!-- 收到PUSH消息 -->
+                <action android:name="com.mpush.KICK_USER" /> <!-- 收到踢人消息 -->
+                <action android:name="com.mpush.CONNECTIVITY_CHANGE" /> <!-- 收到链接变化 -->
+                <action android:name="com.mpush.HANDSHAKE_OK" /> <!-- 收到握手成功消息 -->
+                <action android:name="com.mpush.BIND_USER" /> <!-- 收到绑定用户消息 -->
+                <action android:name="com.mpush.UNBIND_USER" /> <!-- 收到解绑用户消息 -->
+
+
+                <!-- 此值要改为自己的应用的applicationId  @see MPushService -->
+                <category android:name="com.rgk.android.translator" />
+            </intent-filter>
+        </receiver>
+
+
+        
+        <activity android:name=".ui.PairActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+    </application>
+
+</manifest>
