@@ -107,16 +107,9 @@ public class PairActivity extends AppCompatActivity {
 
     private void initViews() {
 
-        NumberBoardView.shared(PairActivity.this, keyboardView, pairIdView.getEditText()).showKeyboard();
-
-        pairIdView.getEditText().setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-                return false;
-            }
-        });
+        NumberBoardView boardView = new NumberBoardView(PairActivity.this, keyboardView, pairIdView.getEditText());
+        boardView.showKeyboard();
+//        NumberBoardView.shared(PairActivity.this, keyboardView, pairIdView.getEditText()).showKeyboard();
 
         RxView.clicks(pairBtn)
                 .throttleFirst(1, TimeUnit.SECONDS)
