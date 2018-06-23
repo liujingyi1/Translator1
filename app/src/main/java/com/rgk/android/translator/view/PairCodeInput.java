@@ -191,7 +191,6 @@ public class PairCodeInput extends RelativeLayout {
         et.setOnKeyListener(new OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                Log.i("jingyi", "keyCode="+keyCode+" event="+event.getAction());
                 if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
                     onKeyDelete();
                     return true;
@@ -199,14 +198,6 @@ public class PairCodeInput extends RelativeLayout {
                 return false;
             }
         });
-
-//        containerEt.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Log.i("jingyi", "onClick......");
-//                et.requestFocus();
-//            }
-//        });
     }
 
 

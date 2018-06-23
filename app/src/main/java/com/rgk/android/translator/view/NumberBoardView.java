@@ -23,7 +23,7 @@ public class NumberBoardView {
     private ViewGroup rootView;
     private EditText ed;
 
-    private NumberBoardView(Activity activity, KeyboardView keyboardView, EditText editText) {
+    public NumberBoardView(Activity activity, KeyboardView keyboardView, EditText editText) {
         this.ed = editText;
 
         keyboard = new Keyboard(activity, R.xml.number_keyboard);
@@ -74,15 +74,10 @@ public class NumberBoardView {
 //                hideKeyboard();
             } else if (primaryCode == Keyboard.KEYCODE_DELETE) {// 回退
                 KeyEvent keyEvent = new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL);
-                Log.i("jingyi", "primaryCode 222");
-                ed.onKeyDown(KeyEvent.KEYCODE_DEL, keyEvent);
-                ed.onKeyUp(KeyEvent.KEYCODE_DEL, keyEvent);
-//                Log.i("jingyi", "primaryCode="+primaryCode+" editable="+editable+" editable.length()="+editable.length()+" start="+start);
+                ed.dispatchKeyEvent(keyEvent);
 //                editable.delete(start - 1, start);
 //                if (editable != null && editable.length() > 0) {
-//                    Log.i("jingyi", "primaryCode 111");
 //                    if (start > 0) {
-//                        Log.i("jingyi", "primaryCode 222");
 //                        editable.delete(start - 1, start);
 //                    }
 //                }
@@ -97,10 +92,10 @@ public class NumberBoardView {
 
     public void showKeyboard() {
 //        if (!isShow) {
-            Log.i("jingyi", "showKeyboard...");
 //            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
 //            layoutParams.addRule(RelativeLayout.ALIGN_BOTTOM, RelativeLayout.TRUE);
 //            rootView.addView(keyboardView, layoutParams);
+        Log.i("jingyi", "showKeyboard....");
             keyboardView.setVisibility(View.VISIBLE);
             isShow = true;
 //        }
